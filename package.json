@@ -1,0 +1,50 @@
+{
+  "name": "@ngodingbang/blog",
+  "version": "1.0.0",
+  "description": "Repository of https://ngodingbang.my.id blog using Hugo and Notion.",
+  "main": "src/index.ts",
+  "private": true,
+  "license": "MIT",
+  "homepage": "https://github.com/ngodingbang/blog",
+  "bugs": {
+    "url": "https://github.com/ngodingbang/blog/issues"
+  },
+  "engines": {
+    "node": "20.15.0"
+  },
+  "volta": {
+    "node": "20.15.0"
+  },
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "server": "hugo server -D --disableFastRender --noHTTPCache",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc",
+    "format": "prettier --write src/**/*.ts"
+  },
+  "keywords": [
+    "blog",
+    "golang",
+    "Hugo",
+    "notion",
+    "DoIt"
+  ],
+  "author": "Septianata Rizky Pratama",
+  "dependencies": {
+    "@notionhq/client": "^2.2.15",
+    "@pclouddev/notion-to-markdown": "^2.7.17",
+    "dotenv": "^16.4.5",
+    "front-matter": "^4.0.2",
+    "fs-extra": "^11.2.0",
+    "markdown-table": "^2.0.0",
+    "yaml": "^2.4.5"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/markdown-table": "^2.0.0",
+    "@types/node": "20.14.9",
+    "prettier": "^3.3.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.2"
+  }
+}

@@ -1,0 +1,4 @@
+baseURL = "https://ngodingbang.github.io/"
+languageCode = "id-id"
+title = "Blog"
+theme = "DoIt"
