@@ -1,7 +1,7 @@
 {
   "name": "@ngodingbang/blog",
   "version": "1.0.0",
-  "description": "Repository of https://ngodingbang.my.id blog using Hugo and Notion.",
+  "description": "Repository of https://ngodingbang.github.io blog using Hugo and Notion.",
   "main": "src/index.ts",
   "private": true,
   "license": "MIT",

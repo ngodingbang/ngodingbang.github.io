@@ -1,6 +1,6 @@
 # NgodingBang Blog
 
-Repository of https://ngodingbang.my.id blog using Hugo and Notion.
+Repository of https://ngodingbang.github.io blog using Hugo and Notion.
 
 ## Credits
 
