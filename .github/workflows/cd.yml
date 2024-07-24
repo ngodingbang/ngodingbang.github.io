@@ -62,11 +62,6 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
-      - name: Pull content from Notion
-        run: |
-          npm install
-          npm start
-
       - name: Build with Hugo
         run: hugo
 
