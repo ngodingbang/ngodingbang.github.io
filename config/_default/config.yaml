@@ -1,22 +1,21 @@
-baseURL = "https://hugodoit.pages.dev"
+baseURL: https://ngodingbang.github.io/
 # [en, zh-cn, fr, pl, ...] determines default content language
 # [en, zh-cn, fr, pl, ...] 设置默认的语言
-defaultContentLanguage = "en"
+defaultContentLanguage: id
 # theme
 # 主题
-theme = "DoIt"
+theme: DoIt
 
 # website title
 # 网站标题
-title = "DoIt"
+title: NgodingBang Blog
 
 # whether to use robots.txt
 # 是否使用 robots.txt
-enableRobotsTXT = true
+enableRobotsTXT: true
 # whether to use git commit log
 # 是否使用 git 信息
-enableGitInfo = true
+enableGitInfo: true
 # whether to use emoji code
 # 是否使用 emoji 代码
-enableEmoji = true
-
+enableEmoji: true
