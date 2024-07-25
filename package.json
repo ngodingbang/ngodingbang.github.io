@@ -5,9 +5,9 @@
   "main": "src/index.ts",
   "private": true,
   "license": "MIT",
-  "homepage": "https://github.com/ngodingbang/blog",
+  "homepage": "https://github.com/ngodingbang/ngodingbang.github.io",
   "bugs": {
-    "url": "https://github.com/ngodingbang/blog/issues"
+    "url": "https://github.com/ngodingbang/ngodingbang.github.io/issues"
   },
   "engines": {
     "node": "20.15.0"
