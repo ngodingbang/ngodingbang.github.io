@@ -1,0 +1,7 @@
+baseURL: https://ngodingbang.github.io
+defaultContentLanguage: id
+title: NgodingBang Blog
+enableRobotsTXT: true
+enableGitInfo: true
+enableEmoji: true
+theme: DoIt

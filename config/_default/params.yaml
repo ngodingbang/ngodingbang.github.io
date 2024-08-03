@@ -1,10 +1,306 @@
+title: Hugo DoIt Theme Documentation
 version: 0.3.X
-page:
-  math:
+defaultTheme: auto
+gitRepo: https://github.com/ngodingbang/ngodingbang.github.io
+fingerprint: ""
+dateFormat: 2006-01-02
+images:
+  - /images/avatar.webp
+enablePWA: false
+license: <a rel="license external nofollow noopener noreffer"
+  href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC
+  BY-NC 4.0</a>
+bundle: false
+image:
+  cacheRemote: true
+  optimise: true
+header:
+  themeChangeMode: switch
+  title:
+    logo: ""
+    name: NgodingBang Blog
+    pre: ""
+    post: ""
+    typeit: true
+footer:
+  enable: true
+  custom: ""
+  hugo: true
+  hostedOn: ""
+  copyright: true
+  author: true
+  since: 2019
+  icp: ""
+  license: <a rel="license external nofollow noopener noreffer"
+    href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC
+    BY-NC 4.0</a>
+section:
+  paginate: 20
+  dateFormat: 01-02
+  rss: 10
+  recentlyUpdated:
     enable: true
-    blockLeftDelimiter: \[
-    blockRightDelimiter: \]
-    inlineLeftDelimiter: \(
-    inlineRightDelimiter: \)
+    rss: true
+    days: 30
+    maxCount: 10
+list:
+  paginate: 20
+  dateFormat: 01-02
+  rss: 10
+page:
+  hiddenFromHomePage: false
+  hiddenFromSearch: false
+  twemoji: false
+  lightgallery: false
+  ruby: true
+  fraction: true
+  linkToMarkdown: true
+  linkToSource: https://github.com/HEIGE-PCloud/DoIt/blob/main/exampleSite/content/{path}
+  linkToEdit: https://github.com/HEIGE-PCloud/DoIt/edit/main/exampleSite/content/{path}
+  linkToReport: https://github.com/HEIGE-PCloud/DoIt/issues/new?title=[bug]%20{title}&body=|Field|Value|%0A|-|-|%0A|Title|{title}|%0A|Url|{url}|%0A|Filename|https://github.com/HEIGE-PCloud/DoIt/blob/main/exampleSite/content/{path}|
+  rssFullText: false
+  seriesNavigation: true
+  enableLastMod: true
+  enableWordCount: true
+  enableReadingTime: true
+  instantpage:
+    enable: true
+  outdatedArticleReminder:
+    enable: false
+    reminder: 90
+    warning: 180
+  toc:
+    enable: true
+    keepStatic: false
+    auto: true
+  code:
+    maxShownLines: 10
+  table:
+    sort: true
+  header:
+    number:
+      enable: true
+      format:
+        h2: "{h2} {title}"
+        h3: "{h2}.{h3} {title}"
+        h4: "{h2}.{h3}.{h4} {title}"
+        h5: "{h2}.{h3}.{h4}.{h5} {title}"
+        h6: "{h2}.{h3}.{h4}.{h5}.{h6} {title}"
+  math:
+    enable: false
+    blockLeftDelimiter: ""
+    blockRightDelimiter: ""
+    inlineLeftDelimiter: ""
+    inlineRightDelimiter: ""
     copyTex: true
     mhchem: true
+    mathjax: false
+  mapbox:
+    accessToken: pk.eyJ1IjoiZGlsbG9uenEiLCJhIjoiY2s2czd2M2x3MDA0NjNmcGxmcjVrZmc2cyJ9.aSjv2BNuZUfARvxRYjSVZQ
+    lightStyle: mapbox://styles/mapbox/light-v10?optimize=true
+    darkStyle: mapbox://styles/mapbox/dark-v10?optimize=true
+    navigation: true
+    geolocate: true
+    scale: true
+    fullscreen: true
+  share:
+    enable: true
+    Baidu: false
+    Blogger: false
+    Buffer: false
+    Digg: false
+    Evernote: false
+    Facebook: true
+    Flipboard: false
+    HackerNews: true
+    Instapaper: false
+    Line: true
+    Linkedin: false
+    Mix: false
+    Myspace: false
+    Odnoklassniki: false
+    Pinterest: false
+    Pocket: false
+    Reddit: false
+    Renren: false
+    Skype: false
+    Stumbleupon: false
+    Telegram: true
+    Trello: false
+    Tumblr: false
+    Twitter: true
+    VK: false
+    Weibo: true
+    Weixin: ""
+    Whatsapp: false
+    Xing: false
+    Mastodon: true
+  comment:
+    enable: true
+    disqus:
+      enable: false
+      shortname: ""
+    gitalk:
+      enable: false
+      owner: ""
+      repo: ""
+      clientId: ""
+      clientSecret: ""
+    valine:
+      enable: false
+      appId: ""
+      appKey: ""
+      placeholder: ""
+      avatar: mp
+      meta: ""
+      pageSize: 10
+      lang: en
+      visitor: true
+      recordIP: false
+      highlight: true
+      enableQQ: false
+      serverURLs: ""
+      emoji: ""
+    waline:
+      enable: false
+      serverURL: https://waline-comment-doit.vercel.app/
+      pageview: true
+      comment: true
+    facebook:
+      enable: false
+      width: 100%
+      numPosts: 10
+      appId: ""
+      languageCode: ""
+    telegram:
+      enable: false
+      siteID: ""
+      limit: 5
+      height: ""
+      color: ""
+      colorful: true
+      dislikes: false
+      outlined: false
+      dark: false
+    commento:
+      enable: false
+    utterances:
+      enable: true
+      repo: ngodingbang/ngodingbang.github.io
+      issueTerm: pathname
+      label: ""
+      lightTheme: github-light
+      darkTheme: github-dark
+    twikoo:
+      enable: false
+      envId: https://twikoo-comments-doit.vercel.app/
+      region: ""
+      path: ""
+      cloudbase: true
+      visitor: true
+      commentCount: true
+    vssue:
+      enable: false
+      platform: ""
+      owner: ""
+      repo: ""
+      clientId: ""
+      clientSecret: ""
+    remark42:
+      enable: false
+      host: ""
+      site_id: ""
+      max_shown_comments: 15
+      show_email_subscription: true
+      simple_view: false
+    giscus:
+      enable: false
+      dataRepo: ""
+      dataRepoId: ""
+      dataCategory: ""
+      dataCategoryId: ""
+      dataMapping: pathname
+      dataStrict: "0"
+      dataReactionsEnabled: "1"
+      dataEmitMetadata: "0"
+      dataInputPosition: bottom
+      lightTheme: light
+      darkTheme: dark
+      dataLang: en
+      dataLoading: lazy
+    artalk:
+      enable: false
+      server: ""
+      site: ""
+      lite: false
+      katex: false
+      lightbox: false
+      pageview: true
+      commentCount: true
+  library:
+    css: {}
+    js: {}
+  seo:
+    images: []
+    publisher:
+      name: xxxx
+      logoUrl: /images/avatar.webp
+  related:
+    enable: true
+    count: 5
+sponsor:
+  enable: false
+  bio: If you find this post helpful, please consider sponsoring.
+  link: https://github.com/sponsors/HEIGE-PCloud
+typeit:
+  speed: 100
+  cursorSpeed: 1000
+  cursorChar: "|"
+  duration: -1
+verification:
+  google: MQ8DNu27ayX6B_4ObiEDK09vGr1fdy7kOAnbd09hJk4
+  bing: ""
+  yandex: ""
+  pinterest: ""
+  baidu: ""
+  so: ""
+  sogou: ""
+seo:
+  image: /images/Apple-Devices-Preview.png
+  thumbnailUrl: /images/screenshot.png
+analytics:
+  enable: true
+  google:
+    id: G-P38MVXH8X0
+    anonymizeIP: true
+  fathom:
+    id: ""
+    server: ""
+  baidu:
+    id: ""
+  umami:
+    data_website_id: ""
+    src: ""
+    data_host_url: ""
+    data_domains: ""
+  plausible:
+    data_domain: ""
+    src: ""
+  cloudflare:
+    token: ""
+  splitbee:
+    enable: false
+    No_cookie: true
+    Do_not_track: true
+    data_token: ""
+cookieconsent:
+  enable: false
+  content:
+    message: ""
+    dismiss: ""
+    link: ""
+cdn:
+  data: ""
+compatibility:
+  polyfill: false
+  objectFit: false

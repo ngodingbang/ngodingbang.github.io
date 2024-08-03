@@ -1,0 +1,58 @@
+# Post
+posts:
+  other: Artikel
+
+# Taxonomy
+series:
+  other: Serial
+
+authors:
+  other: Penulis
+
+# Section
+recentlyUpdated:
+  other: Baru Diperbarui
+
+# partials/header.html
+Light:
+  other: Terang
+Dark:
+  other: Gelap
+Black:
+  other: Hitam
+Auto:
+  other: Otomatis
+
+# partials/footer.html
+poweredBy:
+  other: Dibuat menggunakan {{ .Hugo }}
+hostedOn:
+  other: Dihosting pada {{ .Host }}
+theme:
+  other: Tema - {{ .Theme }}
+
+# posts/single.html
+includedIn:
+  other: "termasuk pada "
+includedInAnd:
+  other: dan
+includedInCategories:
+  one: kategori {{ .Categories }}
+includedInSeries:
+  other: serial {{ .Series }}
+comments:
+  other: komentar
+viewSource:
+  other: Lihat sumber
+editThisPage:
+  other: Ubah halaman ini
+reportThisPage:
+  other: Laporkan isu
+outdatedInfoWarningBefore:
+  other: "Artikel ini terakhir diperbarui pada "
+outdatedInfoWarningAfter:
+  other: ", kontennya mungkin sudah kedaluwarsa."
+sponsor:
+  other: Sponsor
+relatedContent:
+  other: Konten Terkait

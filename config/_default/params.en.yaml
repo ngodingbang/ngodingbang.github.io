@@ -1,0 +1,129 @@
+description: The official documentation for the Hugo DoIt theme
+keywords:
+  - Theme
+  - Hugo
+app:
+  title: NgodingBang Blog
+  noFavicon: false
+  svgFavicon: ""
+  iconColor: "#5bbad5"
+  tileColor: "#da532c"
+search:
+  enable: true
+  type: algolia
+  contentLength: 4000
+  placeholder: ""
+  maxResultLength: 10
+  snippetLength: 300
+  highlightTag: em
+  absoluteURL: false
+  algolia:
+    index: en_index
+    appID: SVHWQLAYIJ
+    searchKey: de9eabf079d30187f30df831e9622b53
+  fuse:
+    isCaseSensitive: false
+    minMatchCharLength: 2
+    findAllMatches: false
+    location: 0
+    threshold: 0.1
+    distance: 100
+    ignoreLocation: true
+    useExtendedSearch: false
+    ignoreFieldNorm: false
+home:
+  rss: 10
+  profile:
+    enable: true
+    gravatarEmail: ngodingbang@gmail.com
+    avatarURL: ""
+    avatarLinkURL: ""
+    title: ""
+    subtitle: Your coding buddy at all times.
+    typeit: false
+    social: true
+    disclaimer: ""
+  posts:
+    enable: true
+    paginate: 7
+social:
+  Angellist: ""
+  Bandcamp: ""
+  Behance: ""
+  Bilibili: ""
+  Bitbucket: ""
+  BuyMeACoffee: ""
+  Codepen: ""
+  Deviantart: ""
+  Devto: ""
+  Douban: ""
+  Dribbble: ""
+  Email: xxxx@xxxx.com
+  Facebook: xxxx
+  Fivehundredpx: ""
+  Flickr: ""
+  Foursquare: ""
+  FreeCodeCamp: ""
+  Gitea: ""
+  GitHub: xxxx
+  Gitlab: ""
+  Goodreads: ""
+  Googlescholar: ""
+  Hackernews: ""
+  Instagram: ""
+  Jsfiddle: ""
+  Keybase: ""
+  Kickstarter: ""
+  Ko-Fi: xxx
+  Lastfm: ""
+  Liberapay: xxx
+  Linkedin: ""
+  Linktree: ""
+  Matrix: ""
+  Medium: ""
+  Mix: ""
+  Odnoklassniki: ""
+  ORCID: ""
+  Patreon: ""
+  Paypal: ""
+  Pinterest: ""
+  QQ: ""
+  QQGroup: ""
+  Quora: ""
+  Reddit: ""
+  Researchgate: ""
+  RSS: true
+  Skype: ""
+  Slidershare: ""
+  Snapchat: ""
+  Soundcloud: ""
+  Spotify: ""
+  Stackoverflow: ""
+  Steam: ""
+  Strava: ""
+  Telegram: xxxx
+  Thingiverse: ""
+  Tumblr: ""
+  Twitch: ""
+  Twitter: xxxx
+  Vine: ""
+  VK: ""
+  Weibo: ""
+  Whatsapp: ""
+  Wordpress: ""
+  Xing: ""
+  XMPP: ""
+  Youtubechannel: ""
+  Youtubecustom: ""
+  Youtubelegacy: xxxx
+  Zhihu: ""
+  Mastodon:
+    id: "@xxxx"
+    prefix: https://mastodon.technology/
+  Diaspora:
+    id: "@xxxx"
+    prefix: https://yyyy/
+sponsor:
+  enable: true
+  bio: If you find this post helpful, please consider sponsoring.
+  link: https://github.com/sponsors/HEIGE-PCloud
