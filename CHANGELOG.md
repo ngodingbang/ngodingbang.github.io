@@ -4,7 +4,7 @@ All notable changes to `NgodingBang Blog` will be documented in this file.
 
 ## [Unreleased](https://github.com/ngodingbang/ngodingbang.github.io/compare/1.0.0...develop)
 
-## [1.0.0](https://github.com/ngodingbang/ngodingbang.github.io/releases/tag/1.0.0) - 2024-07-24
+## [1.0.0](https://github.com/ngodingbang/ngodingbang.github.io/releases/tag/1.0.0) - 2024-08-07
 
 - Initial commit by [@ngodingbang](https://github.com/ngodingbang) in [#0d1f9d5](https://github.com/ngodingbang/ngodingbang.github.io/commit/0d1f9d52c6f2db50c53fa49b2cd8fc0a6cd39611).
 - chore: strict markdown-table library version using 2.0.0 by [@ngodingbang](https://github.com/ngodingbang) in [#0d1f9d5](https://github.com/ngodingbang/ngodingbang.github.io/commit/0d1f9d52c6f2db50c53fa49b2cd8fc0a6cd39611).
@@ -14,3 +14,7 @@ All notable changes to `NgodingBang Blog` will be documented in this file.
 - docs: change project description by [@ngodingbang](https://github.com/ngodingbang) in [#545855c](https://github.com/ngodingbang/ngodingbang.github.io/commit/545855c8240acd9e11e50ec1861356dc46288dee).
 - chore: update github actions script for ci and cd by [@ngodingbang](https://github.com/ngodingbang) in [#f354793](https://github.com/ngodingbang/ngodingbang.github.io/commit/f354793e69086fe974a3c09e78d9b70be5ebfe5c).
 - chore: remove pull content from notion step on github actions cd by [@ngodingbang](https://github.com/ngodingbang) in [#52ce3f1](https://github.com/ngodingbang/ngodingbang.github.io/commit/52ce3f1655375e9e4541b125fa14722f6174036f).
+- chore: change config format from toml into yaml by [@ngodingbang](https://github.com/ngodingbang) in [#a73d1b0](https://github.com/ngodingbang/ngodingbang.github.io/commit/a73d1b04bd94f1ab06cc5e74e31d8e12f6663d89).
+- docs: change github url by [@ngodingbang](https://github.com/ngodingbang) in [#996006b](https://github.com/ngodingbang/ngodingbang.github.io/commit/996006be3105431d01b3be77130fc575a22542fe).
+- chore: setup default config by [@ngodingbang](https://github.com/ngodingbang) in [#f084ecb](https://github.com/ngodingbang/ngodingbang.github.io/commit/f084ecb205f030d2be4c43ffd66d79dcbac78370).
+- chore: update doit theme by [@ngodingbang](https://github.com/ngodingbang) in [#0179a78](https://github.com/ngodingbang/ngodingbang.github.io/commit/0179a78b83c85298dbdb5fad445fb351625729dd).
