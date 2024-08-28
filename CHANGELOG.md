@@ -4,7 +4,7 @@ All notable changes to `NgodingBang Blog` will be documented in this file.
 
 ## [Unreleased](https://github.com/ngodingbang/ngodingbang.github.io/compare/1.0.0...develop)
 
-## [1.0.0](https://github.com/ngodingbang/ngodingbang.github.io/releases/tag/1.0.0) - 2024-08-09
+## [1.0.0](https://github.com/ngodingbang/ngodingbang.github.io/releases/tag/1.0.0) - 2024-08-28
 
 - Initial commit by [@ianriizky](https://github.com/ianriizky) in [#0d1f9d5](https://github.com/ngodingbang/ngodingbang.github.io/commit/0d1f9d52c6f2db50c53fa49b2cd8fc0a6cd39611).
 - chore: strict markdown-table library version using 2.0.0 by [@ianriizky](https://github.com/ianriizky) in [#0d1f9d5](https://github.com/ngodingbang/ngodingbang.github.io/commit/0d1f9d52c6f2db50c53fa49b2cd8fc0a6cd39611).
@@ -20,3 +20,10 @@ All notable changes to `NgodingBang Blog` will be documented in this file.
 - chore: update doit theme by [@ianriizky](https://github.com/ianriizky) in [#0179a78](https://github.com/ngodingbang/ngodingbang.github.io/commit/0179a78b83c85298dbdb5fad445fb351625729dd).
 - chore: change base url into https://ngodingbang.my.id by [@ianriizky](https://github.com/ianriizky) in [#bce8d69](https://github.com/ngodingbang/ngodingbang.github.io/commit/bce8d690fe6396cfe62b4f3ff5b2a4dffc73b12a).
 - chore: change google analytics id by [@ianriizky](https://github.com/ianriizky) in [#bce8d69](https://github.com/ngodingbang/ngodingbang.github.io/commit/bce8d690fe6396cfe62b4f3ff5b2a4dffc73b12a).
+- chore: add vscode config by [@ngodingbang](https://github.com/ngodingbang) in [#a8fcafd](https://github.com/ngodingbang/ngodingbang.github.io/commit/a8fcafda237509e4e0cfd10e8ea6a33cd2b4ba64).
+- feat: finish setup hugo configuration by [@ngodingbang](https://github.com/ngodingbang) in [#434de55](https://github.com/ngodingbang/ngodingbang.github.io/commit/434de5549ea3c7a4784c214b0c67d5ea33d786b7).
+- feat: add authors data by [@ngodingbang](https://github.com/ngodingbang) in [#014647d](https://github.com/ngodingbang/ngodingbang.github.io/commit/014647d73f42d238fd6c17151aee77c40fe46e48).
+- fix: remove page id when convert notion page to markdown by [@ngodingbang](https://github.com/ngodingbang) in [#7a10571](https://github.com/ngodingbang/ngodingbang.github.io/commit/7a10571d52db54afa2a4261a6016129fc29eb7bd).
+- build: update ci and cd script on github action by [@ngodingbang](https://github.com/ngodingbang) in [#c2daf4b](https://github.com/ngodingbang/ngodingbang.github.io/commit/c2daf4bf7dfe2efb2ed1151e43d257ce6218b174).
+- feat: change content directory path for english language by [@ngodingbang](https://github.com/ngodingbang) in [#e8d16d2](https://github.com/ngodingbang/ngodingbang.github.io/commit/e8d16d26a97866230fdc64d04dc5f2c3398a8306).
+- feat: override css tyle and add static image for favicon by [@ngodingbang](https://github.com/ngodingbang) in [#5ff324d](https://github.com/ngodingbang/ngodingbang.github.io/commit/5ff324de26ed6a5a4f0af509e8dbcb4570eaca94).
