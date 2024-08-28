@@ -1,39 +1,63 @@
-title: Hugo DoIt Theme Documentation
+title: NgodingBang Blog
+description: NgodingBang Blog
+license: <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0" target="_blank">CC BY-NC 4.0</a>
+app:
+  title: NgodingBang Blog
+  noFavicon: false
+  iconColor: #000e44
+  tileColor: #000e44
+keywords:
+  - NgodingBang
+  - Blog
+  - Hugo
 version: 0.3.X
 defaultTheme: auto
 gitRepo: https://github.com/ngodingbang/ngodingbang.github.io
-fingerprint: ""
+fingerprint: sha256 # sha256 | sha384 | sha512 | md5
 dateFormat: 2006-01-02
 images:
-  - /images/avatar.webp
-enablePWA: false
-license: <a rel="license external nofollow noopener noreffer"
-  href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC
-  BY-NC 4.0</a>
+  - /logo.webp
+enablePWA: true
 bundle: false
+search:
+  enable: true
+  type: fuse
+  contentLength: 4000
+  maxResultLength: 10
+  snippetLength: 300
+  highlightTag: em
+  absoluteURL: false
+  algolia:
+    appID: SVHWQLAYIJ
+    searchKey: de9eabf079d30187f30df831e9622b53
+  fuse:
+    isCaseSensitive: false
+    minMatchCharLength: 2
+    findAllMatches: false
+    location: 0
+    threshold: 0.1
+    distance: 100
+    ignoreLocation: true
+    useExtendedSearch: false
+    ignoreFieldNorm: false
 image:
   cacheRemote: true
   optimise: true
 header:
-  themeChangeMode: switch
+  themeChangeMode: switch # switch | select
   title:
-    logo: ""
+    logo: /logo.webp
     name: NgodingBang Blog
-    pre: ""
-    post: ""
     typeit: true
 footer:
   enable: true
   custom: ""
-  hugo: true
-  hostedOn: ""
+  hugo: false
+  hostedOn: <a title="Github Pages" href="https://docs.github.com/en/pages/" target="_blank" rel="noopener noreffer">GitHub Pages</a>
   copyright: true
   author: true
-  since: 2019
-  icp: ""
-  license: <a rel="license external nofollow noopener noreffer"
-    href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC
-    BY-NC 4.0</a>
+  since: 2024
+  license: <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0" target="_blank">CC BY-NC 4.0</a>
 section:
   paginate: 20
   dateFormat: 01-02
@@ -47,18 +71,34 @@ list:
   paginate: 20
   dateFormat: 01-02
   rss: 10
+home:
+  rss: 10
+  profile:
+    enable: true
+    gravatarEmail: ngodingbang@gmail.com
+    typeit: false
+    social: true
+  posts:
+    enable: true
+    paginate: 7
+social:
+  GitHub: ngodingbang
+  Instagram: ngodingbang
+  Linkedin: ianrizky
+  Medium: "@ngodingbang"
+  Quora: Septianata-Rizky-Pratama
+  Reddit: PerfectCommunity2982
+  RSS: true
+  Stackoverflow: 9539211/septianata-rizky-pratama
+  Twitter: "@ngodingbang"
+  Youtubechannel:
+    id: "@ngodingbang"
+    prefix: https://www.youtube.com/
 page:
-  hiddenFromHomePage: false
-  hiddenFromSearch: false
-  twemoji: false
-  lightgallery: false
+  twemoji: true
+  lightgallery: true
   ruby: true
   fraction: true
-  linkToMarkdown: true
-  linkToSource: https://github.com/HEIGE-PCloud/DoIt/blob/main/exampleSite/content/{path}
-  linkToEdit: https://github.com/HEIGE-PCloud/DoIt/edit/main/exampleSite/content/{path}
-  linkToReport: https://github.com/HEIGE-PCloud/DoIt/issues/new?title=[bug]%20{title}&body=|Field|Value|%0A|-|-|%0A|Title|{title}|%0A|Url|{url}|%0A|Filename|https://github.com/HEIGE-PCloud/DoIt/blob/main/exampleSite/content/{path}|
-  rssFullText: false
   seriesNavigation: true
   enableLastMod: true
   enableWordCount: true
@@ -74,7 +114,7 @@ page:
     keepStatic: false
     auto: true
   code:
-    maxShownLines: 10
+    maxShownLines: 25
   table:
     sort: true
   header:
@@ -87,7 +127,7 @@ page:
         h5: "{h2}.{h3}.{h4}.{h5} {title}"
         h6: "{h2}.{h3}.{h4}.{h5}.{h6} {title}"
   math:
-    enable: false
+    enable: true
     blockLeftDelimiter: ""
     blockRightDelimiter: ""
     inlineLeftDelimiter: ""
@@ -96,7 +136,7 @@ page:
     mhchem: true
     mathjax: false
   mapbox:
-    accessToken: pk.eyJ1IjoiZGlsbG9uenEiLCJhIjoiY2s2czd2M2x3MDA0NjNmcGxmcjVrZmc2cyJ9.aSjv2BNuZUfARvxRYjSVZQ
+    accessToken: pk.eyJ1IjoibmdvZGluZ2JhbmciLCJhIjoiY20wZGNuaGJwMDdxcjJrcHcyaDYxbGcwNCJ9.RwYKBkr74g89MXnV9zCERg
     lightStyle: mapbox://styles/mapbox/light-v10?optimize=true
     darkStyle: mapbox://styles/mapbox/dark-v10?optimize=true
     navigation: true
@@ -105,36 +145,13 @@ page:
     fullscreen: true
   share:
     enable: true
-    Baidu: false
-    Blogger: false
-    Buffer: false
-    Digg: false
-    Evernote: false
     Facebook: true
-    Flipboard: false
-    HackerNews: true
-    Instapaper: false
-    Line: true
-    Linkedin: false
-    Mix: false
-    Myspace: false
-    Odnoklassniki: false
-    Pinterest: false
-    Pocket: false
-    Reddit: false
-    Renren: false
-    Skype: false
-    Stumbleupon: false
+    Linkedin: true
+    Reddit: true
     Telegram: true
-    Trello: false
-    Tumblr: false
+    Trello: true
     Twitter: true
-    VK: false
-    Weibo: true
-    Weixin: ""
-    Whatsapp: false
-    Xing: false
-    Mastodon: true
+    Whatsapp: true
   comment:
     enable: true
     disqus:
@@ -229,11 +246,11 @@ page:
       dataLang: en
       dataLoading: lazy
     artalk:
-      enable: false
+      enable: true
       server: ""
       site: ""
       lite: false
-      katex: false
+      katex: true
       lightbox: false
       pageview: true
       commentCount: true
@@ -243,62 +260,28 @@ page:
   seo:
     images: []
     publisher:
-      name: xxxx
-      logoUrl: /images/avatar.webp
+      name: Ngoding Bang
+      logoUrl: /logo.webp
   related:
     enable: true
     count: 5
 sponsor:
   enable: false
-  bio: If you find this post helpful, please consider sponsoring.
-  link: https://github.com/sponsors/HEIGE-PCloud
+  link: https://github.com/ngodingbang/ngodingbang.github.io
 typeit:
   speed: 100
   cursorSpeed: 1000
   cursorChar: "|"
   duration: -1
 verification:
-  google: MQ8DNu27ayX6B_4ObiEDK09vGr1fdy7kOAnbd09hJk4
-  bing: ""
-  yandex: ""
-  pinterest: ""
-  baidu: ""
-  so: ""
-  sogou: ""
-seo:
-  image: /images/Apple-Devices-Preview.png
-  thumbnailUrl: /images/screenshot.png
+  google: cLm5w2LJxedbTMkyYbPHeUom7QvW2C3YPrqF82hBxQM
 analytics:
   enable: true
   google:
     id: G-55J4FNKZ1X
     anonymizeIP: true
-  fathom:
-    id: ""
-    server: ""
-  baidu:
-    id: ""
-  umami:
-    data_website_id: ""
-    src: ""
-    data_host_url: ""
-    data_domains: ""
-  plausible:
-    data_domain: ""
-    src: ""
-  cloudflare:
-    token: ""
-  splitbee:
-    enable: false
-    No_cookie: true
-    Do_not_track: true
-    data_token: ""
 cookieconsent:
-  enable: false
-  content:
-    message: ""
-    dismiss: ""
-    link: ""
+  enable: true
 cdn:
   data: ""
 compatibility:
