@@ -26,7 +26,8 @@ defaults:
     shell: bash
 
 env:
-  NODE_VERSION: 20.15.0
+  NODE_VERSION: 20.17.0
+  HUGO_VERSION: 0.133.1
 
 jobs:
   build:
@@ -55,15 +56,20 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: "latest"
+          hugo-version: ${{ env.HUGO_VERSION }}
           extended: true
 
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
 
+      - name: Pull content from Notion
+        run: |
+          npm install
+          npm run pull-content
+
       - name: Build with Hugo
-        run: hugo
+        run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

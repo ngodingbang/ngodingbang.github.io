@@ -10,16 +10,18 @@
     "url": "https://github.com/ngodingbang/ngodingbang.github.io/issues"
   },
   "engines": {
-    "node": "20.15.0"
+    "node": "20.17.0"
   },
   "volta": {
-    "node": "20.15.0"
+    "node": "20.17.0"
   },
   "scripts": {
-    "start": "ts-node src/index.ts",
-    "server": "hugo server -D --disableFastRender --noHTTPCache",
+    "pull-content": "tsx src/index.ts",
+    "pull-content:reset": "rm -rf content/**/* && tsx src/index.ts",
+    "dev": "hugo server --buildDrafts --disableFastRender --noHTTPCache",
+    "start": "npm run dev -- --environment production",
+    "build": "hugo",
     "typecheck": "tsc --noEmit",
-    "build": "tsc",
     "format": "prettier --write src/**/*.ts"
   },
   "keywords": [
@@ -29,21 +31,24 @@
     "notion",
     "DoIt"
   ],
-  "author": "Septianata Rizky Pratama",
+  "author": {
+    "name": "Septianata Rizky Pratama",
+    "email": "ngodingbang@gmail.com"
+  },
   "dependencies": {
     "@notionhq/client": "^2.2.15",
     "dotenv": "^16.4.5",
     "front-matter": "^4.0.2",
     "fs-extra": "^11.2.0",
     "markdown-table": "~2.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.4",
     "yaml": "^2.4.5"
   },
   "devDependencies": {
     "@types/fs-extra": "^11.0.4",
     "@types/markdown-table": "~2.0.0",
     "@types/node": "20.14.9",
-    "prettier": "^3.3.2",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.5.2"
+    "prettier": "^3.3.2"
   }
 }
