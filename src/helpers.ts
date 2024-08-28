@@ -40,15 +40,14 @@ export async function getCoverLink(
   };
 }
 
-export function getFileName(title: string, page_id: string): string {
-  return (
-    title.replaceAll(" ", "-").replace(/--+/g, "-") +
-    "-" +
-    page_id.replaceAll("-", "") +
-    ".md"
-  );
+export function getFileName(title: string): string {
+  return title.replaceAll(" ", "-").replace(/--+/g, "-") + ".md";
 }
 
 export function getFileFullName(page: PageObjectResponse): string {
-  return getFileName(getPageTitle(page), page.id);
+  return getFileName(getPageTitle(page));
+}
+
+export function getNotionPageUrl(page: PageObjectResponse): string {
+  return `https://www.notion.so/${getFileFullName(page).replaceAll(".md", "")}-${page.id.replaceAll("-", "")}`;
 }

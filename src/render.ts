@@ -9,6 +9,7 @@ import {
   getCoverLink,
   getFileFullName,
   getFileName,
+  getNotionPageUrl,
   getPageTitle,
 } from "./helpers";
 import { NotionToMarkdown } from "./markdown/notion-to-md";
@@ -56,7 +57,7 @@ export async function renderPage(page: PageObjectResponse, notion: Client) {
   let nearest_expiry_time: string | null = null;
 
   console.info(
-    `[Info] Start convert page to markdown ${getFileFullName(page)}`,
+    `[Info] Start convert page to markdown ${getNotionPageUrl(page)}`,
   );
   const mdblocks = await n2m.pageToMarkdown(page.id);
   const page_expiry_time = getExpiryTime(mdblocks);
@@ -262,7 +263,7 @@ export async function savePage(
   console.info(`[Info] Updating ${postpath}`);
 
   const { title, pageString } = await renderPage(page, notion);
-  const fileName = getFileName(title, page.id);
+  const fileName = getFileName(title);
 
   await sh(`hugo new "${mount.target_folder}/${fileName}"`, false);
 

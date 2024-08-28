@@ -4,6 +4,7 @@ import {
   ListBlockChildrenResponse,
   PageObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints";
+import { getFileName } from "../helpers";
 import { plainText } from "./md";
 
 export const getBlockChildren = async (
@@ -51,15 +52,6 @@ export function getPageTitle(page: PageObjectResponse): string {
   return plainText(title.title);
 }
 
-export function getFileName(title: any, page_id: any): string {
-  return (
-    title.replaceAll(" ", "-").replace(/--+/g, "-") +
-    "-" +
-    page_id.replaceAll("-", "") +
-    ".md"
-  );
-}
-
 export const getPageRelrefFromId = async (
   pageId: string,
   notion: Client,
@@ -76,7 +68,7 @@ export const getPageRelrefFromId = async (
   }
 
   const title = getPageTitle(page);
-  const fileName = getFileName(title, page.id);
+  const fileName = getFileName(title);
   const relref = `{{% relref "${fileName}" %}}`;
 
   return { title, relref };

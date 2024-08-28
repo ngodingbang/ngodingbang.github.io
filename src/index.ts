@@ -3,7 +3,7 @@ import { isFullPageOrDatabase } from "@notionhq/client/build/src/helpers";
 import fs from "fs-extra";
 import { loadConfig } from "./config";
 import { getAllContentFiles } from "./file";
-import { getFileFullName } from "./helpers";
+import { getNotionPageUrl } from "./helpers";
 import { savePage } from "./render";
 
 async function main() {
@@ -26,9 +26,7 @@ async function main() {
         continue;
       }
 
-      console.info(
-        `[Info] Start processing page ${getFileFullName(page)} [id: ${page.id}]`,
-      );
+      console.info(`[Info] Start processing page ${getNotionPageUrl(page)}`);
       page_ids.push(page.id);
 
       await savePage(page, notion, mount);
