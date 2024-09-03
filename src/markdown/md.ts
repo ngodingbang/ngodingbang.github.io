@@ -250,7 +250,7 @@ export async function richText(
         } else if (text.type === "equation") {
           return equationRichText(text);
         } else if (text.type === "mention") {
-          return await mentionRichText(text, notion);
+          return mentionRichText(text, notion);
         }
       }),
     )
