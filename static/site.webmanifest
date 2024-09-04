@@ -1,6 +1,9 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "NgodingBang Blog",
+    "short_name": "NgodingBang",
+    "start_url": "/",
+    "description": "Repository of NgodingBang blog using Hugo and Notion.",
+    "orientation": "portrait",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
