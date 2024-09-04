@@ -47,24 +47,48 @@ function getExpiryTime(
   return expiry_time;
 }
 
-export async function renderPage(page: PageObjectResponse, notion: Client) {
+export async function renderPage(
+  page: PageObjectResponse,
+  notion: Client,
+  postpath: string,
+) {
   const n2m = new NotionToMarkdown({ notionClient: notion });
 
-  let frontInjectString = "";
-  let nearest_expiry_time: string | null = null;
-
   console.info(
-    `[Info] Start convert page to markdown ${getNotionPageUrl(page)}`,
+    `[Info] Start convert page ${getNotionPageUrl(page)} to markdown ${postpath}\n`,
   );
   const mdblocks = await n2m.pageToMarkdown(page.id);
-  const page_expiry_time = getExpiryTime(mdblocks);
+
+  const mdString = n2m.toMarkdownString(mdblocks);
+  const frontMatter = await collectFrontMatter(page, notion, mdblocks);
+
+  return {
+    frontMatter,
+    pageString:
+      "---\n" +
+      YAML.stringify(frontMatter, {
+        defaultStringType: "QUOTE_DOUBLE",
+        defaultKeyType: "PLAIN",
+      }) +
+      "\n---\n" +
+      "\n" +
+      mdString,
+  };
+}
+
+export async function collectFrontMatter(
+  page: PageObjectResponse,
+  notion: Client,
+  blocks: MdBlock[],
+): Promise<
+  Record<string, string | string[] | number | boolean | PageObjectResponse>
+> {
+  let nearest_expiry_time: string | null = null;
+  const page_expiry_time = getExpiryTime(blocks);
 
   if (page_expiry_time) {
     nearest_expiry_time = page_expiry_time;
   }
-
-  const mdString = n2m.toMarkdownString(mdblocks);
-  page.properties.Name;
 
   const title = getPageTitle(page);
   const frontMatter: Record<
@@ -217,19 +241,7 @@ export async function renderPage(page: PageObjectResponse, notion: Client) {
     frontMatter.EXPIRY_TIME = nearest_expiry_time;
   }
 
-  return {
-    title,
-    pageString:
-      "---\n" +
-      YAML.stringify(frontMatter, {
-        defaultStringType: "QUOTE_DOUBLE",
-        defaultKeyType: "PLAIN",
-      }) +
-      "\n---\n" +
-      frontInjectString +
-      "\n" +
-      mdString,
-  };
+  return frontMatter;
 }
 
 export async function savePage(
@@ -252,16 +264,13 @@ export async function savePage(
       post.expiry_time == null &&
       metadata.last_edited_time === page.last_edited_time
     ) {
-      console.info(`[Info] The post ${postpath} is up-to-date, skipped`);
+      console.info(`[Info] The post ${postpath} is up-to-date, skipped\n`);
       return;
     }
   }
 
-  /** otherwise update the page */
-  console.info(`[Info] Updating ${postpath}`);
-
-  const { title, pageString } = await renderPage(page, notion);
-  const fileName = getFileName(title);
+  const { pageString } = await renderPage(page, notion, postpath);
+  const fileName = getFileName(page);
 
   await sh(`hugo new "${mount.target_folder}/${fileName}"`, false);
 

@@ -8,14 +8,14 @@ import { savePage } from "./render";
 
 async function main() {
   const config = await loadConfig();
-  console.info("[Info] Config loaded");
+  console.info("[Info] Config loaded\n");
 
   const notion = new Client({ auth: config.notion_token });
 
   const page_ids: string[] = [];
 
   /** process mounted databases */
-  console.info("[Info] Start processing mounted databases");
+  console.info("[Info] Start processing mounted databases\n");
   for (const mount of config.mount.databases) {
     fs.ensureDirSync(`content/${mount.target_folder}`);
 

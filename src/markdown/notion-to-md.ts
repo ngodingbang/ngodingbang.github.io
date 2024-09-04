@@ -3,7 +3,7 @@ import {
   GetBlockResponse,
   RichTextItemResponse,
 } from "@notionhq/client/build/src/api-endpoints";
-import { getBlockChildren, getPageRelrefFromId } from "../helpers";
+import { getBlockChildren, getPageRelrefWithLangFromId } from "../helpers";
 import * as md from "./md";
 import { plainText } from "./md";
 import { CustomTransformer, MdBlock, NotionToMarkdownOptions } from "./types";
@@ -262,7 +262,7 @@ export class NotionToMarkdown {
         const linkToPage = block.link_to_page;
 
         if (linkToPage.type === "page_id") {
-          const { title, relref } = await getPageRelrefFromId(
+          const { title, relref } = await getPageRelrefWithLangFromId(
             linkToPage.page_id,
             this.notionClient,
           );

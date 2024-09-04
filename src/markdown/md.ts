@@ -9,7 +9,7 @@ import {
   VideoBlockObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints";
 import markdownTable from "markdown-table";
-import { getPageRelrefFromId } from "../helpers";
+import { getPageRelrefWithLangFromId } from "../helpers";
 import { CalloutIcon } from "./types";
 
 export function inlineCode(text: string) {
@@ -189,7 +189,10 @@ async function mentionRichText(
   switch (mention.type) {
     case "page": {
       const pageId = mention.page.id;
-      const { title, relref } = await getPageRelrefFromId(pageId, notion);
+      const { title, relref } = await getPageRelrefWithLangFromId(
+        pageId,
+        notion,
+      );
 
       return link(title, relref);
     }
