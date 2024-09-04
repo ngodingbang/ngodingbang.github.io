@@ -1,5 +1,9 @@
 import { Client, isFullPage } from "@notionhq/client";
-import { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints";
+import {
+  GetBlockResponse,
+  ListBlockChildrenResponse,
+  PageObjectResponse,
+} from "@notionhq/client/build/src/api-endpoints";
 
 export function getPageTitle(page: PageObjectResponse): string {
   const title = page.properties.Name ?? page.properties.title;
@@ -58,4 +62,59 @@ export function getFileFullName(page: PageObjectResponse): string {
 
 export function getNotionPageUrl(page: PageObjectResponse): string {
   return `https://www.notion.so/${getFileFullName(page).replaceAll(".md", "")}-${page.id.replaceAll("-", "")}`;
+}
+
+export async function getBlockChildren(
+  notionClient: Client,
+  block_id: string,
+  totalPage: number | null,
+) {
+  try {
+    let results: GetBlockResponse[] = [];
+    let pageCount = 0;
+    let start_cursor = undefined;
+
+    do {
+      const response: ListBlockChildrenResponse =
+        await notionClient.blocks.children.list({
+          start_cursor,
+          block_id,
+        });
+      results.push(...response.results);
+
+      start_cursor = response.next_cursor;
+      pageCount += 1;
+    } while (
+      start_cursor != null &&
+      (totalPage == null || pageCount < totalPage)
+    );
+
+    return results;
+  } catch (e) {
+    console.error(e);
+
+    return [];
+  }
+}
+
+export async function getPageRelrefFromId(
+  pageId: string,
+  notion: Client,
+): Promise<{
+  title: string;
+  relref: string;
+}> {
+  const page = await notion.pages.retrieve({ page_id: pageId });
+
+  if (!isFullPage(page)) {
+    throw new Error(
+      `The pages.retrieve endpoint failed to return a full page for ${pageId}.`,
+    );
+  }
+
+  const title = getPageTitle(page);
+  const fileName = getFileName(page);
+  const relref = `{{< ref "${fileName}" >}}`;
+
+  return { title, relref };
 }

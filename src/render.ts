@@ -49,9 +49,6 @@ function getExpiryTime(
 
 export async function renderPage(page: PageObjectResponse, notion: Client) {
   const n2m = new NotionToMarkdown({ notionClient: notion });
-  n2m.setUnsupportedTransformer((type) => {
-    return `{{< notion-unsupported-block type=${type} >}}`;
-  });
 
   let frontInjectString = "";
   let nearest_expiry_time: string | null = null;
@@ -149,6 +146,7 @@ export async function renderPage(page: PageObjectResponse, notion: Client) {
           if (response.status) {
             frontMatter[property] = response.status.name;
           }
+          break;
 
         /** ignore these properties */
         case "last_edited_by":

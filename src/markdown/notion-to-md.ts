@@ -3,9 +3,9 @@ import {
   GetBlockResponse,
   RichTextItemResponse,
 } from "@notionhq/client/build/src/api-endpoints";
+import { getBlockChildren, getPageRelrefFromId } from "../helpers";
 import * as md from "./md";
 import { plainText } from "./md";
-import { getBlockChildren, getPageRelrefFromId } from "./notion";
 import { CustomTransformer, MdBlock, NotionToMarkdownOptions } from "./types";
 
 /**
@@ -15,7 +15,8 @@ export class NotionToMarkdown {
   private notionClient: Client;
   private customTransformers: Record<string, CustomTransformer>;
   private richText: (textArray: RichTextItemResponse[]) => Promise<string>;
-  private unsupportedTransformer: (type: string) => string = () => "";
+  private unsupportedTransformer: (type: string) => string = (type) =>
+    `{{< notion-unsupported-block type=${type} >}}`;
 
   constructor(options: NotionToMarkdownOptions) {
     this.notionClient = options.notionClient;

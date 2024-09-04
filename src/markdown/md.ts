@@ -9,59 +9,59 @@ import {
   VideoBlockObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints";
 import markdownTable from "markdown-table";
-import { getPageRelrefFromId } from "./notion";
+import { getPageRelrefFromId } from "../helpers";
 import { CalloutIcon } from "./types";
 
-export const inlineCode = (text: string) => {
+export function inlineCode(text: string) {
   return `\`${text}\``;
-};
+}
 
-export const bold = (text: string) => {
+export function bold(text: string) {
   return `**${text}**`;
-};
+}
 
-export const italic = (text: string) => {
+export function italic(text: string) {
   return `_${text}_`;
-};
+}
 
-export const strikethrough = (text: string) => {
+export function strikethrough(text: string) {
   return `~~${text}~~`;
-};
+}
 
-export const underline = (text: string) => {
+export function underline(text: string) {
   return `<u>${text}</u>`;
-};
+}
 
-export const link = (text: string, href: string) => {
+export function link(text: string, href: string) {
   return `[${text}](${href})`;
-};
+}
 
-export const codeBlock = (text: string, language?: string) => {
+export function codeBlock(text: string, language?: string) {
   if (language === "plain text") language = "text";
 
   return `\`\`\`${language}
 ${text}
 \`\`\``;
-};
+}
 
-export const heading1 = (text: string) => {
+export function heading1(text: string) {
   return `# ${text}`;
-};
+}
 
-export const heading2 = (text: string) => {
+export function heading2(text: string) {
   return `## ${text}`;
-};
+}
 
-export const heading3 = (text: string) => {
+export function heading3(text: string) {
   return `### ${text}`;
-};
+}
 
-export const quote = (text: string) => {
+export function quote(text: string) {
   // the replace is done to handle multiple lines
   return `> ${text.replace(/\n/g, "  \n> ")}`;
-};
+}
 
-export const callout = (text: string, icon?: CalloutIcon) => {
+export function callout(text: string, icon?: CalloutIcon) {
   let emoji: string | undefined;
 
   if (icon?.type === "emoji") {
@@ -70,23 +70,23 @@ export const callout = (text: string, icon?: CalloutIcon) => {
 
   // the replace is done to handle multiple lines
   return `> ${emoji ? emoji + " " : ""}${text.replace(/\n/g, "  \n> ")}`;
-};
+}
 
-export const bullet = (text: string, count?: number) => {
+export function bullet(text: string, count?: number) {
   let renderText = text.trim();
 
   return count ? `${count}. ${renderText}` : `- ${renderText}`;
-};
+}
 
-export const todo = (text: string, checked: boolean) => {
+export function todo(text: string, checked: boolean) {
   return checked ? `- [x] ${text}` : `- [ ] ${text}`;
-};
+}
 
-export const image = (alt: string, href: string) => {
+export function image(alt: string, href: string) {
   return `![${alt}](${href})`;
-};
+}
 
-export const addTabSpace = (text: string, n = 0) => {
+export function addTabSpace(text: string, n = 0) {
   const tab = "	";
 
   for (let i = 0; i < n; i++) {
@@ -100,13 +100,13 @@ export const addTabSpace = (text: string, n = 0) => {
   }
 
   return text;
-};
+}
 
-export const divider = () => {
+export function divider() {
   return "---";
-};
+}
 
-export const toggle = (summary?: string, children?: string) => {
+export function toggle(summary?: string, children?: string) {
   if (!summary) {
     return children || "";
   }
@@ -117,15 +117,15 @@ export const toggle = (summary?: string, children?: string) => {
 ${children || ""}
 
   </details>`;
-};
+}
 
-export const table = (cells: string[][]) => {
+export function table(cells: string[][]) {
   return markdownTable(cells);
-};
+}
 
-export const plainText = (textArray: RichTextItemResponse[]) => {
+export function plainText(textArray: RichTextItemResponse[]) {
   return textArray.map((text) => text.plain_text).join("");
-};
+}
 
 /**
  * Block equation.
@@ -134,9 +134,9 @@ export const plainText = (textArray: RichTextItemResponse[]) => {
  * @param expression
  * @returns
  */
-export const equation = (expression: string) => {
+export function equation(expression: string) {
   return `\\[${expression}\\]`;
-};
+}
 
 function textRichText(text: TextRichTextItemResponse): string {
   const annotations = text.annotations;
@@ -257,7 +257,7 @@ export async function richText(
   ).join("");
 }
 
-export const video = (block: VideoBlockObjectResponse) => {
+export function video(block: VideoBlockObjectResponse) {
   const videoBlock = block.video;
 
   if (videoBlock.type === "file") {
@@ -278,7 +278,7 @@ export const video = (block: VideoBlockObjectResponse) => {
   }
 
   return htmlVideo(url);
-};
+}
 
 function htmlVideo(url: string) {
   return `<video controls style="height:auto;width:100%;">
@@ -290,18 +290,18 @@ function htmlVideo(url: string) {
 </video>`;
 }
 
-export const pdf = (block: PdfBlockObjectResponse) => {
+export function pdf(block: PdfBlockObjectResponse) {
   const pdfBlock = block.pdf;
   const url =
     pdfBlock.type === "file" ? pdfBlock.file.url : pdfBlock.external.url;
 
   return `<embed src="${url}" type="application/pdf" style="width: 100%;aspect-ratio: 2/3;height: auto;" />`;
-};
+}
 
-export const audio = (block: AudioBlockObjectResponse) => {
+export function audio(block: AudioBlockObjectResponse) {
   const audioBlock = block.audio;
   const url =
     audioBlock.type === "file" ? audioBlock.file.url : audioBlock.external.url;
 
   return `<audio controls src="${url}"></audio>`;
-};
+}
