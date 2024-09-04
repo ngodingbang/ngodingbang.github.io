@@ -111,7 +111,7 @@ page:
     keepStatic: false
     auto: true
   code:
-    maxShownLines: 25
+    maxShownLines: 100
   table:
     sort: true
   header:
