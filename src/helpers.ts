@@ -165,7 +165,7 @@ export async function getPageRelrefWithLangFromId(
   const title = getPageTitle(page);
   const fileName = getFileName(page);
   const language = getPageLanguage(page);
-  const relref = `{{< relref path="${fileName}" lang="${language}" >}}`;
+  const relref = `{{< relref path="${fileName}" ${language ? `lang="${language}"` : ""} >}}`;
 
   return { title, relref };
 }
