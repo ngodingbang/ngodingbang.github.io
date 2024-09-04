@@ -37,7 +37,7 @@ includedIn:
 includedInAnd:
   other: dan
 includedInCategories:
-  one: kategori {{ .Categories }}
+  other: kategori {{ .Categories }}
 includedInSeries:
   other: serial {{ .Series }}
 comments:
