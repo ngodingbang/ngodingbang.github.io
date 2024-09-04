@@ -27,5 +27,5 @@ goldmark:
   renderer:
     unsafe: true
 tableOfContents:
-  startLevel: 2
+  startLevel: 1
   endLevel: 6
