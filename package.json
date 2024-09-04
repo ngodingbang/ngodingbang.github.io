@@ -17,7 +17,8 @@
   },
   "scripts": {
     "pull-content": "tsx src/index.ts",
-    "pull-content:reset": "rm -rf content/**/* && tsx src/index.ts",
+    "pull-content:reset": "rm -rf content/* && rm -rf public && rm -rf resources",
+    "pull-content:refresh": "npm run pull-content:reset && tsx src/index.ts",
     "dev": "hugo server --buildDrafts --disableFastRender --noHTTPCache",
     "start": "npm run dev -- --environment production",
     "build": "hugo",
