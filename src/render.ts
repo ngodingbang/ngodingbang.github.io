@@ -12,7 +12,7 @@ import {
   getNotionPageUrl,
   getPageTitle,
 } from "./helpers";
-import { NotionToMarkdown } from "./markdown/notion-to-md";
+import NotionToMarkdown from "./markdown/NotionToMarkdown";
 import { MdBlock } from "./markdown/types";
 import { sh } from "./sh";
 

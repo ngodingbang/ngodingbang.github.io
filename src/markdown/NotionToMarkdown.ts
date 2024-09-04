@@ -11,7 +11,7 @@ import { CustomTransformer, MdBlock, NotionToMarkdownOptions } from "./types";
 /**
  * Converts a Notion page to Markdown.
  */
-export class NotionToMarkdown {
+export default class NotionToMarkdown {
   private notionClient: Client;
   private customTransformers: Record<string, CustomTransformer>;
   private richText: (textArray: RichTextItemResponse[]) => Promise<string>;
