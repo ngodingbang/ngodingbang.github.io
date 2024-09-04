@@ -21,7 +21,7 @@ main:
     weight: 5
   - identifier: about
     name: Tentang
-    url: /tentang/
+    url: /about/
     weight: 6
   - identifier: github
     pre: "<svg class='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 496
