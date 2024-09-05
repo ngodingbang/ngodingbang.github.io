@@ -2,7 +2,12 @@
 
 All notable changes to `NgodingBang Blog` will be documented in this file.
 
-## [Unreleased](https://github.com/ngodingbang/ngodingbang.github.io/compare/1.0.0...develop)
+## [Unreleased](https://github.com/ngodingbang/ngodingbang.github.io/compare/1.1.0...develop)
+
+## [1.1.0](https://github.com/ngodingbang/ngodingbang.github.io/releases/tag/1.1.0) - 2024-09-05
+
+- chore: add Septianata Rizky Pratama into authors list by [@ngodingbang](https://github.com/ngodingbang) in [#ced7f79](https://github.com/ngodingbang/ngodingbang.github.io/commit/ced7f7970742e688a9f325932d4814dcaea6e01c).
+- chore: remove Ngoding Bang from authors list by [@ngodingbang](https://github.com/ngodingbang) in [#4133420](https://github.com/ngodingbang/ngodingbang.github.io/commit/4133420e1d1291965dc4cc36da8e2e5ba52ffa5a).
 
 ## [1.0.0](https://github.com/ngodingbang/ngodingbang.github.io/releases/tag/1.0.0) - 2024-09-04
 
