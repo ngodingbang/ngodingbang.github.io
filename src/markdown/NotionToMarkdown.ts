@@ -15,14 +15,15 @@ export default class NotionToMarkdown {
   private notionClient: Client;
   private customTransformers: Record<string, CustomTransformer>;
   private richText: (textArray: RichTextItemResponse[]) => Promise<string>;
-  private unsupportedTransformer: (type: string) => string = (type) =>
-    `{{< notion-unsupported-block type=${type} >}}`;
+  private unsupportedTransformer: (type: string) => string;
 
   constructor(options: NotionToMarkdownOptions) {
     this.notionClient = options.notionClient;
     this.customTransformers = {};
     this.richText = (textArray: RichTextItemResponse[]) =>
       md.richText(textArray, this.notionClient);
+    this.unsupportedTransformer = (type) =>
+      `{{< notion-unsupported-block type=${type} >}}`;
   }
 
   setCustomTransformer(
