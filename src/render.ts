@@ -266,6 +266,10 @@ export async function savePage(
     ) {
       console.info(`[Info] The post ${postpath} is up-to-date, skipped\n`);
       return;
+    } else {
+      console.info(
+        `[Info] The post ${postpath} need to be updated, re-render\n`,
+      );
     }
   }
 
