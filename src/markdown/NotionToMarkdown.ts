@@ -3,9 +3,9 @@ import {
   GetBlockResponse,
   RichTextItemResponse,
 } from "@notionhq/client/build/src/api-endpoints";
-import { getBlockChildren, getPageRelrefWithLangFromId } from "../helpers";
+import { getBlockChildren } from "../helpers";
 import * as md from "./md";
-import { plainText } from "./md";
+import * as shortcode from "./shortcode";
 import { CustomTransformer, MdBlock, NotionToMarkdownOptions } from "./types";
 
 /**
@@ -211,7 +211,9 @@ export default class NotionToMarkdown {
    * @returns corresponding markdown string of the passed block
    */
   async blockToMarkdown(block: GetBlockResponse): Promise<string> {
-    if (typeof block !== "object" || !("type" in block)) return "";
+    if (typeof block !== "object" || !("type" in block)) {
+      return "";
+    }
 
     const { type } = block;
 
@@ -225,16 +227,14 @@ export default class NotionToMarkdown {
         const url =
           image.type === "external" ? image.external.url : image.file.url;
 
-        return md.image(plainText(image.caption), url);
+        return shortcode.image(md.plainText(image.caption), url);
       }
 
-      case "divider": {
+      case "divider":
         return md.divider();
-      }
 
-      case "equation": {
+      case "equation":
         return md.equation(block.equation.expression);
-      }
 
       case "video":
         return md.video(block);
@@ -249,6 +249,7 @@ export default class NotionToMarkdown {
 
         return md.link(file.name, link);
       }
+
       case "bookmark": {
         const bookmark = block.bookmark;
         const caption =
@@ -263,7 +264,7 @@ export default class NotionToMarkdown {
         const linkToPage = block.link_to_page;
 
         if (linkToPage.type === "page_id") {
-          const { title, relref } = await getPageRelrefWithLangFromId(
+          const { title, relref } = await md.relrefFromPage(
             linkToPage.page_id,
             this.notionClient,
           );
@@ -285,7 +286,7 @@ export default class NotionToMarkdown {
       case "embed": {
         const embed = block.embed;
         const title =
-          embed.caption.length > 0 ? plainText(embed.caption) : embed.url;
+          embed.caption.length > 0 ? md.plainText(embed.caption) : embed.url;
 
         return md.link(title, embed.url);
       }
@@ -457,11 +458,11 @@ export default class NotionToMarkdown {
 
       case "code":
         return md.codeBlock(
-          plainText(block.code.rich_text),
+          md.plainText(block.code.rich_text),
           block.code.language,
         );
 
-      case "callout":
+      case "callout": {
         const { id, has_children } = block;
         const callout_text = await this.richText(block.callout.rich_text);
 
@@ -488,8 +489,9 @@ export default class NotionToMarkdown {
         });
 
         return md.callout(callout_string.trim(), block.callout.icon);
+      }
 
-      case "quote":
+      case "quote": {
         const quote_text = await this.richText(block.quote.rich_text);
 
         if (!block.has_children) {
@@ -512,18 +514,13 @@ export default class NotionToMarkdown {
         });
 
         return md.quote(quote_string.trim());
+      }
 
       case "audio":
         return md.audio(block);
 
       case "template":
       case "synced_block":
-      case "child_page":
-      case "child_database":
-      case "column":
-      case "link_preview":
-      case "column_list":
-      case "link_to_page":
       case "breadcrumb":
       case "unsupported":
       case "table_of_contents":

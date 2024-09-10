@@ -6,7 +6,7 @@ export async function sh(
   panic: boolean = true,
 ): Promise<{ stdout: string; stderr: string }> {
   return new Promise(function (resolve, reject) {
-    exec(cmd, (err, stdout, stderr) => {
+    exec(cmd, function (err, stdout, stderr) {
       if (err && panic) {
         reject(err);
       } else {

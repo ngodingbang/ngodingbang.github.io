@@ -4,14 +4,9 @@ import fs from "fs-extra";
 import path from "path";
 import YAML from "yaml";
 import { DatabaseMount, PageMount } from "./config";
-import { getContentFile } from "./file";
-import {
-  getCoverLink,
-  getFileFullName,
-  getFileName,
-  getNotionPageUrl,
-  getPageTitle,
-} from "./helpers";
+import { getContentFile, getFileFullName, getFileName } from "./file";
+import { getCoverLink, getNotionPageUrl, getPageTitle } from "./helpers";
+
 import NotionToMarkdown from "./markdown/NotionToMarkdown";
 import { MdBlock } from "./markdown/types";
 import { sh } from "./sh";

@@ -2,8 +2,10 @@ import { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 import fm from "front-matter";
 import fs from "fs";
 import path from "path";
+import { getPageLanguage, getPageTitle } from "./helpers";
+import { plainText } from "./markdown/md";
 
-type ContentFile = {
+export type ContentFile = {
   filename: string;
   /** relative path to the project folder */
   filepath: string;
@@ -11,7 +13,7 @@ type ContentFile = {
   expiry_time: string | null | undefined;
 };
 
-function isMarkdownFile(filename: string): boolean {
+export function isMarkdownFile(filename: string): boolean {
   return filename.endsWith(".md");
 }
 
@@ -82,4 +84,33 @@ export function getAllContentFiles(dirPath: string): ContentFile[] {
   }
 
   return fileArray;
+}
+
+export function getFileName(page: PageObjectResponse): string {
+  const filename = page.properties?.filename;
+
+  if (filename !== undefined && filename?.type !== "rich_text") {
+    throw new Error(
+      `page.properties.filename has type ${filename.type} instead of rich_text. The underlying Notion API might has changed, please report an issue to the author.`,
+    );
+  }
+
+  if (filename.rich_text.length > 0) {
+    return plainText(filename.rich_text) + ".md";
+  }
+
+  const title = getPageTitle(page)
+    .normalize("NFD") // split an accented letter in the base letter and the acent
+    .replace(/[\u0300-\u036f]/g, "") // remove all previously split accents
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9 ]/g, "") // remove all chars not letters, numbers and spaces (to be replaced)
+    .replace(/\s+/g, "-");
+  const language = getPageLanguage(page);
+
+  return title + (language ? `.${language}` : "") + ".md";
+}
+
+export function getFileFullName(page: PageObjectResponse): string {
+  return getFileName(page);
 }

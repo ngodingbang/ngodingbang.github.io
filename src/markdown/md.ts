@@ -1,4 +1,4 @@
-import { Client } from "@notionhq/client";
+import { Client, isFullPage } from "@notionhq/client";
 import {
   AudioBlockObjectResponse,
   EquationRichTextItemResponse,
@@ -9,7 +9,8 @@ import {
   VideoBlockObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints";
 import markdownTable from "markdown-table";
-import { getPageRelrefWithLangFromId } from "../helpers";
+import { getPageTitle } from "../helpers";
+import { ref, relref } from "./shortcode";
 import { CalloutIcon } from "./types";
 
 export function inlineCode(text: string) {
@@ -189,10 +190,7 @@ async function mentionRichText(
   switch (mention.type) {
     case "page": {
       const pageId = mention.page.id;
-      const { title, relref } = await getPageRelrefWithLangFromId(
-        pageId,
-        notion,
-      );
+      const { title, relref } = await relrefFromPage(pageId, notion);
 
       return link(title, relref);
     }
@@ -307,4 +305,44 @@ export function audio(block: AudioBlockObjectResponse) {
     audioBlock.type === "file" ? audioBlock.file.url : audioBlock.external.url;
 
   return `<audio controls src="${url}"></audio>`;
+}
+
+export async function refFromPage(
+  pageId: string,
+  notion: Client,
+): Promise<{
+  title: string;
+  ref: string;
+}> {
+  const page = await notion.pages.retrieve({ page_id: pageId });
+
+  if (!isFullPage(page)) {
+    throw new Error(
+      `The pages.retrieve endpoint failed to return a full page for ${pageId}.`,
+    );
+  }
+
+  const title = getPageTitle(page);
+
+  return { title, ref: await ref(page) };
+}
+
+export async function relrefFromPage(
+  pageId: string,
+  notion: Client,
+): Promise<{
+  title: string;
+  relref: string;
+}> {
+  const page = await notion.pages.retrieve({ page_id: pageId });
+
+  if (!isFullPage(page)) {
+    throw new Error(
+      `The pages.retrieve endpoint failed to return a full page for ${pageId}.`,
+    );
+  }
+
+  const title = getPageTitle(page);
+
+  return { title, relref: await relref(page) };
 }
