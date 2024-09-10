@@ -45,6 +45,16 @@ ${text}
 \`\`\``;
 }
 
+export async function codeBlockWithCaption(
+  text: string,
+  language: string,
+  caption: RichTextItemResponse[],
+) {
+  return `\`\`\`${language} {title="${plainText(caption)}"}
+${text}
+\`\`\``;
+}
+
 export function heading1(text: string) {
   return `# ${text}`;
 }

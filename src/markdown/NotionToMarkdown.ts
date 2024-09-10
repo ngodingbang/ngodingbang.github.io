@@ -457,9 +457,10 @@ export default class NotionToMarkdown {
         );
 
       case "code":
-        return md.codeBlock(
+        return md.codeBlockWithCaption(
           md.plainText(block.code.rich_text),
           block.code.language,
+          block.code.caption,
         );
 
       case "callout": {
