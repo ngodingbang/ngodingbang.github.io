@@ -2,7 +2,17 @@
 
 All notable changes to `NgodingBang Blog` will be documented in this file.
 
-## [Unreleased](https://github.com/ngodingbang/ngodingbang.github.io/compare/1.1.0...develop)
+## [Unreleased](https://github.com/ngodingbang/ngodingbang.github.io/compare/1.2.0...develop)
+
+## [1.2.0](https://github.com/ngodingbang/ngodingbang.github.io/releases/tag/1.2.0) - 2024-09-11
+
+- feat: add console log when notion page need to be updated by [@ngodingbang](https://github.com/ngodingbang) in [#a56cb53](https://github.com/ngodingbang/ngodingbang.github.io/commit/a56cb538146fc245505182052d2afda1ced4b3f4).
+- refactor: create default value of unsupportedTransformer on NotionToMarkdown property when instanced by [@ngodingbang](https://github.com/ngodingbang) in [#31e8f13](https://github.com/ngodingbang/ngodingbang.github.io/commit/31e8f137fd1bc12145c94e6adbaa4c329c265a40).
+- chore:! remove ananke theme by [@ngodingbang](https://github.com/ngodingbang) in [#8dea0a5](https://github.com/ngodingbang/ngodingbang.github.io/commit/8dea0a54ba176037d368f1069912884b3f6c5701).
+- refactor: create shortcode helper function by [@ngodingbang](https://github.com/ngodingbang) in [#cc33509](https://github.com/ngodingbang/ngodingbang.github.io/commit/cc33509e31ccabde60afd3dca8f63583fa9cea40).
+- feat: add title when pull code content from notion to markdown by [@ngodingbang](https://github.com/ngodingbang) in [#6749ac1](https://github.com/ngodingbang/ngodingbang.github.io/commit/6749ac1392f6c9232cb54718eb91cebfa7e87e35).
+- refactor: beautify console info display and logic code when processing notion to markdown page by [@ngodingbang](https://github.com/ngodingbang) in [#6e14ad9](https://github.com/ngodingbang/ngodingbang.github.io/commit/6e14ad9b4f58ffb53a4a713533e0264a34062d28).
+- chore: disable typeit feature on blog title header by [@ngodingbang](https://github.com/ngodingbang) in [#f2599b8](https://github.com/ngodingbang/ngodingbang.github.io/commit/f2599b8a23757198460de6371659235e0760e9b6).
 
 ## [1.1.0](https://github.com/ngodingbang/ngodingbang.github.io/releases/tag/1.1.0) - 2024-09-05
 
