@@ -50,7 +50,7 @@ export async function renderPage(
   const n2m = new NotionToMarkdown({ notionClient: notion });
 
   console.info(
-    `[Info] Start convert page ${getNotionPageUrl(page)} to markdown ${postpath}\n`,
+    `✨ Convert notion page [${getNotionPageUrl(page)}] to markdown [${postpath}]`,
   );
   const mdblocks = await n2m.pageToMarkdown(page.id);
 
@@ -259,12 +259,10 @@ export async function savePage(
       post.expiry_time == null &&
       metadata.last_edited_time === page.last_edited_time
     ) {
-      console.info(`[Info] The post ${postpath} is up-to-date, skipped\n`);
+      console.info(`✅ Post [${postpath}] is up-to-date, skipped`);
       return;
     } else {
-      console.info(
-        `[Info] The post ${postpath} need to be updated, re-render\n`,
-      );
+      console.info(`🚨 Post [${postpath}] need to be updated, re-render`);
     }
   }
 
