@@ -48,7 +48,7 @@ header:
   title:
     logo: /logo.webp
     name: NgodingBang Blog
-    typeit: true
+    typeit: false
 footer:
   enable: true
   custom: ""
