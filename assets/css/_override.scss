@@ -1,4 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Fira+Mono:400,700&display=swap&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+$global-font-family:
+  "Inter",
+  ui-sans-serif,
+  system-ui,
+  sans-serif,
+  Apple Color Emoji,
+  Segoe UI Emoji,
+  Segoe UI Symbol,
+  Noto Color Emoji;
 
 $code-font-family:
   Fira Mono,
