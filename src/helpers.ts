@@ -42,21 +42,19 @@ export async function getCoverLink(
     return null;
   }
 
-  if (page.cover === null) {
-    return null;
-  }
-
-  if (page.cover.type === "external") {
+  if (page.cover?.type === "external") {
     return {
       link: page.cover.external.url,
       expiry_time: null,
     };
+  } else if (page.cover?.type === "file") {
+    return {
+      link: page.cover.file.url,
+      expiry_time: page.cover.file.expiry_time,
+    };
   }
 
-  return {
-    link: page.cover.file.url,
-    expiry_time: page.cover.file.expiry_time,
-  };
+  return null;
 }
 
 export function getNotionPageUrl(page: PageObjectResponse): string {

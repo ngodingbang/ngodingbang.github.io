@@ -96,12 +96,13 @@ export async function collectFrontMatter(
     draft: false,
   };
 
-  /** set featuredImage */
+  /** set featuredImage and open graph image */
   const featuredImageLink = await getCoverLink(page.id, notion);
 
   if (featuredImageLink) {
     const { link, expiry_time } = featuredImageLink;
     frontMatter.featuredImage = link;
+    frontMatter.images = [link];
 
     /** update nearest_expiry_time */
     if (expiry_time) {
