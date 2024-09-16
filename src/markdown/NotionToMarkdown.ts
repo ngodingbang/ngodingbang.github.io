@@ -326,7 +326,6 @@ export default class NotionToMarkdown {
 
         if (has_children) {
           const tableRows = await getBlockChildren(this.notionClient, id, 100);
-          // console.log(">>", tableRows);
           let rowsPromise = tableRows?.map(async (row) => {
             const { type } = row as any;
             const cells = (row as any)[type]["cells"];
@@ -345,9 +344,7 @@ export default class NotionToMarkdown {
             );
 
             const cellStringArr = await Promise.all(cellStringPromise);
-            // console.log("~~", cellStringArr);
             tableArr.push(cellStringArr);
-            // console.log(tableArr);
           });
 
           await Promise.all(rowsPromise || []);
