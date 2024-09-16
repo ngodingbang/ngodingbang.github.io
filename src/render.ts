@@ -215,6 +215,7 @@ export async function collectFrontMatter(
           case "rich_text":
             frontMatter[property] = frontMatter[property] || "";
             frontMatter[property] += result.rich_text.plain_text;
+
           /** ignore these */
           case "relation":
           case "title":
@@ -226,14 +227,8 @@ export async function collectFrontMatter(
   }
 
   /** set default author */
-  if (frontMatter.authors == null) {
-    const response = await notion.users.retrieve({
-      user_id: page.last_edited_by.id,
-    });
-
-    if (response.name) {
-      frontMatter.authors = [response.name];
-    }
+  if (typeof frontMatter.authors === "string") {
+    frontMatter.authors = [frontMatter.authors];
   }
 
   /** save metadata */
