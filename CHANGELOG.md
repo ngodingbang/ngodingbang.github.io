@@ -2,7 +2,16 @@
 
 All notable changes to `NgodingBang Blog` will be documented in this file.
 
-## [Unreleased](https://github.com/ngodingbang/ngodingbang.github.io/compare/1.2.0...develop)
+## [Unreleased](https://github.com/ngodingbang/ngodingbang.github.io/compare/1.3.0...develop)
+
+## [1.3.0](https://github.com/ngodingbang/ngodingbang.github.io/releases/tag/1.3.0) - 2024-09-16
+
+- feat: change default font family using Inter by [@ngodingbang](https://github.com/ngodingbang) in [#f6435cb](https://github.com/ngodingbang/ngodingbang.github.io/commit/f6435cbc75c349def5b6b1e3f6695ee366769ff5).
+- feat: add front matter for "created_by" and "last_edited_by" property by [@ngodingbang](https://github.com/ngodingbang) in [#a7d200d](https://github.com/ngodingbang/ngodingbang.github.io/commit/a7d200d313de80ee8f1ea84081bd2f5a914ef12b).
+- fix: set default author property taken from notion database property by [@ngodingbang](https://github.com/ngodingbang) in [#c3e4906](https://github.com/ngodingbang/ngodingbang.github.io/commit/c3e4906046d4eb6d7bd5fcda59ca65ebcd67c115).
+- feat: change default header title font family using Inter by [@ngodingbang](https://github.com/ngodingbang) in [#b0a3673](https://github.com/ngodingbang/ngodingbang.github.io/commit/b0a36733f5d17fd875aa32acb7c6074d688f5d23).
+- feat: add images front matter on single post markdown by [@ngodingbang](https://github.com/ngodingbang) in [#5245ed4](https://github.com/ngodingbang/ngodingbang.github.io/commit/5245ed4957430d66f9cf858682b33e022901f6d8).
+- refactor: remove unnecessary console.log by [@ngodingbang](https://github.com/ngodingbang) in [#dadbfe5](https://github.com/ngodingbang/ngodingbang.github.io/commit/dadbfe52375d734d83da1359170b522697dce3fb).
 
 ## [1.2.0](https://github.com/ngodingbang/ngodingbang.github.io/releases/tag/1.2.0) - 2024-09-11
 
