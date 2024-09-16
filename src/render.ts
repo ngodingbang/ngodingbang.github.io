@@ -167,15 +167,26 @@ export async function collectFrontMatter(
           }
           break;
 
-        /** ignore these properties */
+        case "created_by":
+          if (response.created_by) {
+            // @ts-ignore
+            frontMatter[property] = response.created_by.name;
+          }
+          break;
+
         case "last_edited_by":
+          if (response.last_edited_by) {
+            // @ts-ignore
+            frontMatter[property] = response.last_edited_by.name;
+          }
+          break;
+
+        /** ignore these properties */
+        case "created_time":
         case "last_edited_time":
         case "rollup":
         case "files":
         case "formula":
-        case "created_by":
-        case "created_time":
-          break;
         default:
           break;
       }
