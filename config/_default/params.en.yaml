@@ -1,8 +1,9 @@
+description: Learn together about Laravel, Node. js, and other programming languages.
 search:
   algolia:
     index: en_index
 home:
   profile:
-    subtitle: Your coding buddy at all times.
+    subtitle: Learn together about Laravel, Node. js, and other programming languages.
 sponsor:
   bio: If you find this post helpful, please consider sponsoring.

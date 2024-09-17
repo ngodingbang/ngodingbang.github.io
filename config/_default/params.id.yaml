@@ -1,8 +1,9 @@
+description: Belajar bareng tentang Laravel, Node.js, dan bahasa pemrograman lainnya.
 search:
   algolia:
     index: id_index
 home:
   profile:
-    subtitle: Teman ngoding-mu setiap saat.
+    subtitle: Belajar bareng tentang Laravel, Node.js, dan bahasa pemrograman lainnya.
 sponsor:
   bio: Bila Anda merasa postingan ini bermanfaat, mohon pertimbangkan untuk mensponsori.

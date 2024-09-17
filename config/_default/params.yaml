@@ -1,8 +1,7 @@
-title: NgodingBang Blog
-description: NgodingBang Blog
+title: NgodingBang
 license: <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0" target="_blank">CC BY-NC 4.0</a>
 app:
-  title: NgodingBang Blog
+  title: NgodingBang
   noFavicon: false
   iconColor: #000e44
   tileColor: #000e44
@@ -47,7 +46,7 @@ header:
   themeChangeMode: switch # switch | select
   title:
     logo: /logo.webp
-    name: NgodingBang Blog
+    name: NgodingBang
     typeit: false
 footer:
   enable: true
