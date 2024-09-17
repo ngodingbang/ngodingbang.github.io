@@ -2,7 +2,11 @@
 
 All notable changes to `NgodingBang Blog` will be documented in this file.
 
-## [Unreleased](https://github.com/ngodingbang/ngodingbang.github.io/compare/1.4.0...main)
+## [Unreleased](https://github.com/ngodingbang/ngodingbang.github.io/compare/1.4.1...main)
+
+## [1.4.1](https://github.com/ngodingbang/ngodingbang.github.io/releases/tag/1.4.1) - 2024-09-17
+
+- fix: unreleased github url on changelog by [@ngodingbang](https://github.com/ngodingbang) in [#ceb1257](https://github.com/ngodingbang/ngodingbang.github.io/commit/ceb1257e9b42f618a79be15fc1911d426de901a4).
 
 ## [1.4.0](https://github.com/ngodingbang/ngodingbang.github.io/releases/tag/1.4.0) - 2024-09-17
 
