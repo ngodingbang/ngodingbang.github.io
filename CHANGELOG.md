@@ -2,7 +2,7 @@
 
 All notable changes to `NgodingBang Blog` will be documented in this file.
 
-## [Unreleased](https://github.com/ngodingbang/ngodingbang.github.io/compare/1.4.0...develop)
+## [Unreleased](https://github.com/ngodingbang/ngodingbang.github.io/compare/1.4.0...main)
 
 ## [1.4.0](https://github.com/ngodingbang/ngodingbang.github.io/releases/tag/1.4.0) - 2024-09-17
 
