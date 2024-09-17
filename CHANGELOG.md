@@ -2,7 +2,11 @@
 
 All notable changes to `NgodingBang Blog` will be documented in this file.
 
-## [Unreleased](https://github.com/ngodingbang/ngodingbang.github.io/compare/1.4.1...main)
+## [Unreleased](https://github.com/ngodingbang/ngodingbang.github.io/compare/1.5.0...main)
+
+## [1.5.0](https://github.com/ngodingbang/ngodingbang.github.io/releases/tag/1.5.0) - 2024-09-17
+
+- feat: parse custom front matter property on notion page using JSON format by [@ngodingbang](https://github.com/ngodingbang) in [#8c81239](https://github.com/ngodingbang/ngodingbang.github.io/commit/8c81239e8c3f0c05588833cbabe5961623c36f03).
 
 ## [1.4.1](https://github.com/ngodingbang/ngodingbang.github.io/releases/tag/1.4.1) - 2024-09-17
 
