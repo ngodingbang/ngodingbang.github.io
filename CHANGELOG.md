@@ -2,7 +2,13 @@
 
 All notable changes to `NgodingBang Blog` will be documented in this file.
 
-## [Unreleased](https://github.com/ngodingbang/ngodingbang.github.io/compare/1.3.0...develop)
+## [Unreleased](https://github.com/ngodingbang/ngodingbang.github.io/compare/1.4.0...develop)
+
+## [1.4.0](https://github.com/ngodingbang/ngodingbang.github.io/releases/tag/1.4.0) - 2024-09-17
+
+- chore: change blog main title and description by [@ngodingbang](https://github.com/ngodingbang) in [#7451513](https://github.com/ngodingbang/ngodingbang.github.io/commit/7451513eaf2c0bc42eed7b8ce19a7abf809cc388).
+- fix: hugo pagination params config deprecated by [@ngodingbang](https://github.com/ngodingbang) in [#3141f6f](https://github.com/ngodingbang/ngodingbang.github.io/commit/3141f6fde9d7d0b17a75a038e5d910903d4eb333) and [#2e9ac6a](https://github.com/ngodingbang/ngodingbang.github.io/commit/2e9ac6ae5bc08275a43367a6d7e38779ba82d720).
+- fix: social username for twitter by [@ngodingbang](https://github.com/ngodingbang) in [#a82c667](https://github.com/ngodingbang/ngodingbang.github.io/commit/a82c6672396dfeb971bdce79689a92ec11e1c694).
 
 ## [1.3.0](https://github.com/ngodingbang/ngodingbang.github.io/releases/tag/1.3.0) - 2024-09-16
 
