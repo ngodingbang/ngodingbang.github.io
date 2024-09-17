@@ -1,12 +1,12 @@
 import { Client, isFullUser, iteratePaginatedAPI } from "@notionhq/client";
 import { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 import fs from "fs-extra";
+import _ from "lodash";
 import path from "path";
 import YAML from "yaml";
 import { DatabaseMount, PageMount } from "./config";
 import { getContentFile, getFileFullName, getFileName } from "./file";
 import { getCoverLink, getNotionPageUrl, getPageTitle } from "./helpers";
-
 import NotionToMarkdown from "./markdown/NotionToMarkdown";
 import { MdBlock } from "./markdown/types";
 import { sh } from "./sh";
@@ -86,7 +86,7 @@ export async function collectFrontMatter(
   }
 
   const title = getPageTitle(page);
-  const frontMatter: Record<
+  let frontMatter: Record<
     string,
     string | string[] | number | boolean | PageObjectResponse
   > = {
@@ -228,8 +228,15 @@ export async function collectFrontMatter(
   }
 
   /** set default author */
-  if (typeof frontMatter.authors === "string") {
+  if (typeof frontMatter?.authors === "string") {
     frontMatter.authors = [frontMatter.authors];
+  }
+
+  /** set custom front matter */
+  if (typeof frontMatter?.["custom-front-matter"] === "string") {
+    const customFrontMatter = JSON.parse(frontMatter?.["custom-front-matter"]);
+
+    frontMatter = _.merge(frontMatter, customFrontMatter);
   }
 
   /** save metadata */
