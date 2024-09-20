@@ -1,6 +1,7 @@
 # NgodingBang Blog
 
 [![License](https://badgen.net/github/license/ngodingbang/ngodingbang.github.io "License")](LICENSE.md)
+[![Release](https://badgen.net/github/release/ngodingbang/ngodingbang.github.io "Release")](https://github.com/ngodingbang/ngodingbang.github.io/releases)
 [![Continuous Integration](https://github.com/ngodingbang/ngodingbang.github.io/actions/workflows/ci.yml/badge.svg "Continuous Integration")](https://github.com/ngodingbang/ngodingbang.github.io/actions/workflows/ci.yml)
 [![Continuous Deployment](https://github.com/ngodingbang/ngodingbang.github.io/actions/workflows/cd.yml/badge.svg "Continuous Deployment")](https://github.com/ngodingbang/ngodingbang.github.io/actions/workflows/cd.yml)
 
@@ -45,8 +46,14 @@ You can read the license [here](LICENSE.md).
 
 ## Contributor
 
-- [Ngoding Bang](https://github.com/ngodingbang)
-- [Septianata Rizky Pratama](https://github.com/ianriizky)
+- Ngoding Bang
+
+  [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white "GitHub")](https://github.com/ngodingbang)
+
+- Septianata Rizky Pratama
+
+  [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white "GitHub")](https://github.com/ianriizky)
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-white?style=for-the-badge&logo=linkedin&colorB=0a66c2 "LinkedIn")](https://www.linkedin.com/in/ianrizky)
 
 ## Credits
 
