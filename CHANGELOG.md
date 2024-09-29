@@ -2,7 +2,13 @@
 
 All notable changes to `NgodingBang Blog` will be documented in this file.
 
-## [Unreleased](https://github.com/ngodingbang/ngodingbang.github.io/compare/1.5.0...main)
+## [Unreleased](https://github.com/ngodingbang/ngodingbang.github.io/compare/1.6.0...main)
+
+## [1.6.0](https://github.com/ngodingbang/ngodingbang.github.io/releases/tag/1.6.0) - 2024-09-30
+
+- docs: add release and author badge on readme by [@ngodingbang](https://github.com/ngodingbang) in [#39c6f31](https://github.com/ngodingbang/ngodingbang.github.io/commit/39c6f31670cbe4a8a4cf0f3f97711c6dd797d3f5).
+- fix: category and series on post single and summary layout is missing if contains whitespace by [@ngodingbang](https://github.com/ngodingbang) in [#01b89fb](https://github.com/ngodingbang/ngodingbang.github.io/commit/01b89fb8224fc66257e80c121f6aa3d9f6865e43).
+- chore: change link of main author data by [@ngodingbang](https://github.com/ngodingbang) in [#39fed4d](https://github.com/ngodingbang/ngodingbang.github.io/commit/39fed4d135bf0fc00f1937fc68415a3c027b9eb2).
 
 ## [1.5.0](https://github.com/ngodingbang/ngodingbang.github.io/releases/tag/1.5.0) - 2024-09-17
 
