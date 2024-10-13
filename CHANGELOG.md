@@ -2,7 +2,11 @@
 
 All notable changes to `NgodingBang Blog` will be documented in this file.
 
-## [Unreleased](https://github.com/ngodingbang/ngodingbang.github.io/compare/1.6.0...main)
+## [Unreleased](https://github.com/ngodingbang/ngodingbang.github.io/compare/1.6.1...main)
+
+## [1.6.1](https://github.com/ngodingbang/ngodingbang.github.io/releases/tag/1.6.1) - 2024-10-14
+
+- fix: series title is missing at details-summary section on single posts layout by [@ngodingbang](https://github.com/ngodingbang) in [#e7ae774](https://github.com/ngodingbang/ngodingbang.github.io/commit/e7ae7748b225e8ff4051d56d870494fcdcaa05e3).
 
 ## [1.6.0](https://github.com/ngodingbang/ngodingbang.github.io/releases/tag/1.6.0) - 2024-09-30
 
