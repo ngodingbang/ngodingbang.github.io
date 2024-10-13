@@ -121,7 +121,7 @@
                     <span id="{{ .RelPermalink }}" class="leancloud_visitors" data-flag-title="{{ .Title }}">
                         {{ partial "plugin/fontawesome.html" (dict "Style" "regular" "Icon" "eye") }}&nbsp;<span class="artalk-pv-count" id="ArtalkPV"></span>&nbsp;{{ T "views" }}
                     </span>&nbsp;
-                 {{- end -}}
+                {{- end -}}
 
                 {{- /* Comment Count */ -}}
                 {{- if $comment.enable | and $comment.waline.enable | and $comment.waline.comment -}}
@@ -166,10 +166,9 @@
                 {{- range $key, $value := .Site.Taxonomies.series -}}
                     {{- range $params.series -}}
                         {{- if . | urlize | eq ($key | urlize) -}}
-                            {{- $term := $.Site.GetPage "series" $key -}}
                             <div class="details series-nav open">
                                 <div class="details-summary series-title">
-                                    <span>{{ T "series" }} - {{ $term.Title }}</span>
+                                    <span>{{ T "series" }} - {{ . }}</span>
                                     <span class="details-icon">{{ partial "plugin/fontawesome.html" (dict "Style" "solid" "Icon" "angle-right") }}</span>
                                 </div>
                                 <div class="details-content series-content">
