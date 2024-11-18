@@ -160,7 +160,7 @@
                 -}}
                 {{- dict "Src" . "Title" $.Description "Resources" $.Resources "Loading" "eager" "OptimConfig" $optim | partial "plugin/image.html" -}}
             </div>
-        {{- end -}}      
+        {{- end -}}
         {{- /* Series list */ -}}
         {{- if $params.series | and $params.seriesNavigation -}}
                 {{- range $key, $value := .Site.Taxonomies.series -}}
