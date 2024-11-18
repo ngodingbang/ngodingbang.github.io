@@ -2,7 +2,11 @@
 
 All notable changes to `NgodingBang Blog` will be documented in this file.
 
-## [Unreleased](https://github.com/ngodingbang/ngodingbang.github.io/compare/1.6.1...main)
+## [Unreleased](https://github.com/ngodingbang/ngodingbang.github.io/compare/1.6.2...main)
+
+## [1.6.2](https://github.com/ngodingbang/ngodingbang.github.io/releases/tag/1.6.2) - 2024-11-18
+
+- fix: replace open graph and twitter card image using local resource by [@ngodingbang](https://github.com/ngodingbang) in [#075fed7](https://github.com/ngodingbang/ngodingbang.github.io/commit/075fed74ccd819c61c3c0e2fdc6df33b48a67e67).
 
 ## [1.6.1](https://github.com/ngodingbang/ngodingbang.github.io/releases/tag/1.6.1) - 2024-10-14
 
