@@ -27,7 +27,7 @@ defaults:
 
 env:
   NODE_VERSION: 20.17.0
-  HUGO_VERSION: 0.134.0
+  HUGO_VERSION: 0.146.7
 
 jobs:
   build:
