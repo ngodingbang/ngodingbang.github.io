@@ -1,1 +1,1 @@
-posts: :filename
+posts: :contentbasename
