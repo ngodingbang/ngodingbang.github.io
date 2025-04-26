@@ -95,8 +95,16 @@ export function getFileName(page: PageObjectResponse): string {
     );
   }
 
+  const language = getPageLanguage(page);
+
   if (filename.rich_text.length > 0) {
-    return plainText(filename.rich_text) + ".md";
+    let plainFilename = plainText(filename.rich_text);
+
+    if (!plainFilename.endsWith(`.${language}`)) {
+      plainFilename += `.${language}`;
+    }
+
+    return plainFilename + ".md";
   }
 
   const title = getPageTitle(page)
@@ -106,7 +114,6 @@ export function getFileName(page: PageObjectResponse): string {
     .trim()
     .replace(/[^a-z0-9 ]/g, "") // remove all chars not letters, numbers and spaces (to be replaced)
     .replace(/\s+/g, "-");
-  const language = getPageLanguage(page);
 
   return title + (language ? `.${language}` : "") + ".md";
 }
