@@ -2,7 +2,19 @@
 
 All notable changes to `NgodingBang Blog` will be documented in this file.
 
-## [Unreleased](https://github.com/ngodingbang/ngodingbang.github.io/compare/1.6.2...main)
+## [Unreleased](https://github.com/ngodingbang/ngodingbang.github.io/compare/1.7.0...main)
+
+## [1.7.0](https://github.com/ngodingbang/ngodingbang.github.io/releases/tag/1.7.0) - 2025-04-26
+
+- chore: update doit theme into v0.4.2 by [@ngodingbang](https://github.com/ngodingbang) in [#a8c6d79](https://github.com/ngodingbang/ngodingbang.github.io/commit/a8c6d797774259c002c71b4ceb044808c90a4151).
+- build: upgrade hugo version into 0.146.7 by [@ngodingbang](https://github.com/ngodingbang) in [#b68cc80](https://github.com/ngodingbang/ngodingbang.github.io/commit/b68cc8017599c360a81abd83a3e07056d5739ad7).
+- ui: remove margin left and right on h1 of single page content by [@ngodingbang](https://github.com/ngodingbang) in [#f88181a](https://github.com/ngodingbang/ngodingbang.github.io/commit/f88181a5ba4eca21522b267a103c518e85136205).
+- chore: change twitter terms into X by [@ngodingbang](https://github.com/ngodingbang) in [#aa1505e](https://github.com/ngodingbang/ngodingbang.github.io/commit/aa1505e1e8b180920aa7330eed95a6003ce95ce8).
+- chore: remove trello share button by [@ngodingbang](https://github.com/ngodingbang) in [#aca309a](https://github.com/ngodingbang/ngodingbang.github.io/commit/aca309af939b576767d686122b8ea1793d62f019).
+- feat: enable to detect post language when defining page title from its filename property by [@ngodingbang](https://github.com/ngodingbang) in [#c710799](https://github.com/ngodingbang/ngodingbang.github.io/commit/c710799d77203f2e220523d0e58d853359aed1e7).
+- refactor: change try catch error handling on hugo based on https://gohugo.io/functions/go-template/try by [@ngodingbang](https://github.com/ngodingbang) in [#86574ec](https://github.com/ngodingbang/ngodingbang.github.io/commit/86574ec493f486a3c5000c45ef4446cb139fca0d).
+- docs: upgrade hugo version on readme by [@ngodingbang](https://github.com/ngodingbang) in [#6ecf346](https://github.com/ngodingbang/ngodingbang.github.io/commit/6ecf346c40e5b02a97c08247ab4bb10c8699911d).
+- fix: replace deprecated posts permalink :filename into :contentbasename instead by [@ngodingbang](https://github.com/ngodingbang) in [#242db42](https://github.com/ngodingbang/ngodingbang.github.io/commit/242db425804793904268ff4aa8ed58b49f8258db).
 
 ## [1.6.2](https://github.com/ngodingbang/ngodingbang.github.io/releases/tag/1.6.2) - 2024-11-18
 
