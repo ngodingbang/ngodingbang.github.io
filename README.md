@@ -10,7 +10,7 @@ Repository of [NgodingBang blog](https://ngodingbang.my.id) using Hugo and Notio
 ## Requirement
 
 - [Node.js](https://nodejs.org) ^20.17.0
-- [Hugo](https://gohugo.io) ^0.134.0
+- [Hugo](https://gohugo.io) ^0.146.7
 - [Notion](https://www.notion.so)
 
 ## Installation
