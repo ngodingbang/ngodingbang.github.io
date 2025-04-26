@@ -86,7 +86,7 @@ social:
   Linkedin: ianrizky
   Medium: "@ngodingbang"
   RSS: true
-  Twitter: "ngodingbang"
+  X: "ngodingbang"
   Youtubechannel:
     id: "@ngodingbang"
     prefix: https://www.youtube.com/
@@ -146,7 +146,7 @@ page:
     Reddit: true
     Telegram: true
     Trello: true
-    Twitter: true
+    X: true
     Whatsapp: true
   comment:
     enable: true
