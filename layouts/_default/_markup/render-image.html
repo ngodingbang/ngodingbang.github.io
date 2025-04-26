@@ -1,8 +1,8 @@
 {{ $url := .Destination }}
-{{ with resources.GetRemote $url }}
+{{ with try (resources.GetRemote $url) }}
   {{ with .Err }}
     {{ errorf "Failed to download image %s" . }}
-  {{ else }}
+  {{ else with .Value }}
     <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" {{- with $.Text }} alt="{{ . }}"{{ end -}} {{- with $.Title }} title="{{ . }}"{{ end -}} style="width: auto;height: auto;">
   {{ end }}
 {{ else }}
