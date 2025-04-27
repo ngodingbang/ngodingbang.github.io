@@ -2,7 +2,11 @@
 
 All notable changes to `NgodingBang Blog` will be documented in this file.
 
-## [Unreleased](https://github.com/ngodingbang/ngodingbang.github.io/compare/1.7.0...main)
+## [Unreleased](https://github.com/ngodingbang/ngodingbang.github.io/compare/1.7.1...main)
+
+## [1.7.1](https://github.com/ngodingbang/ngodingbang.github.io/releases/tag/1.7.1) - 2025-04-27
+
+- fix: add translation in english for authors by [@ngodingbang](https://github.com/ngodingbang) in [#e3403e0](https://github.com/ngodingbang/ngodingbang.github.io/commit/e3403e025b05421d249586a8f733ad6cf6625488).
 
 ## [1.7.0](https://github.com/ngodingbang/ngodingbang.github.io/releases/tag/1.7.0) - 2025-04-26
 
