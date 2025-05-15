@@ -2,7 +2,15 @@
 
 All notable changes to `NgodingBang Blog` will be documented in this file.
 
-## [Unreleased](https://github.com/ngodingbang/ngodingbang.github.io/compare/1.7.1...main)
+## [Unreleased](https://github.com/ngodingbang/ngodingbang.github.io/compare/1.8.0...main)
+
+## [1.8.0](https://github.com/ngodingbang/ngodingbang.github.io/releases/tag/1.8.0) - 2025-05-15
+
+- chore: change blog main description by [@ngodingbang](https://github.com/ngodingbang) in [#042ca4a](https://github.com/ngodingbang/ngodingbang.github.io/commit/042ca4aa2adec0f279b288d9e9dee98e15d7ce11).
+- chore: update doit theme into v0.4.2 by [@ngodingbang](https://github.com/ngodingbang) in [#1fe13d4](https://github.com/ngodingbang/ngodingbang.github.io/commit/1fe13d4e9adab523501c437c68b6c97e13c35b46).
+- chore: add /content directory on gitignore list by [@ngodingbang](https://github.com/ngodingbang) in [#f7ca8ff](https://github.com/ngodingbang/ngodingbang.github.io/commit/f7ca8fff8fc72278bf9e33001ca0b2dbbb571a1f).
+- chore: remove instagram from social list by [@ngodingbang](https://github.com/ngodingbang) in [#ba9676f](https://github.com/ngodingbang/ngodingbang.github.io/commit/ba9676f61b6ec93ba20d3d7d40be1bd5ac4d3d74).
+- chore: remove medium from social list by [@ngodingbang](https://github.com/ngodingbang) in [#a29f98c](https://github.com/ngodingbang/ngodingbang.github.io/commit/a29f98cde25be450d5e28a4e93b1aa6db5f1b82a).
 
 ## [1.7.1](https://github.com/ngodingbang/ngodingbang.github.io/releases/tag/1.7.1) - 2025-04-27
 
