@@ -82,14 +82,13 @@ home:
     paginate: 7
 social:
   GitHub: ngodingbang
-  Instagram: ngodingbang
   Linkedin: ianrizky
-  Medium: "@ngodingbang"
-  RSS: true
-  X: "ngodingbang"
+  Instagram: ngodingbang
+  Threads: "@ngodingbang"
   Youtubechannel:
     id: "@ngodingbang"
     prefix: https://www.youtube.com/
+  RSS: true
 page:
   twemoji: true
   lightgallery: true
